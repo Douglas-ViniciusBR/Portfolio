@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(Assents/fundo-ofc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+
+/* Estilo do Header */
+
+#cabecario {
+    background-color: #000000a9;
+    height: 75px;
+    width: 100%;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+}
+
+nav {
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    margin: 50;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ddd;
+    padding: 20px;
+}
+
+nav a:hover {
+    color: #39FF14;
+    transition: 0.9s;
+
+}
+
+#main {
+    width: 100%;
+    height: calc(100vh - 75px);   
+    display: flex; 
+    align-items: center;
+}
+
+.msg-principal {   
+    margin: 60px;
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 0;
+    color: white;
+    padding-left: 100px;
+
+}
+
+.destaque {
+    color: #39FF14;
+}
+
+.topicos {
+    color: #39FF14;
+    font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 0;
+    font-size: 35px;
+    text-align: center;
+}
