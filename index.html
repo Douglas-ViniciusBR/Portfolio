@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Geist+Pixel&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -15,27 +15,25 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <title>Portfólio</title>
+    <title>Douglas Vinícius Developer Full Stack</title>
   </head>
   <body>
     <!-- Cabeçario -->
-   <header id="cabecario">
+    <header id="cabecario">
+      <button id="tema">
+        <img src="Assents/Botão.png" alt="Logo DV" />
+      </button>
 
-    <button id="tema">
-        <img src="Assents/Botão.png" alt="Logo DV">
-    </button>
-
-    <nav>
+      <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Tecnologias</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contatos</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Contatos</a></li>
         </ul>
-    </nav>
-
-</header>
+      </nav>
+    </header>
 
     <br /><br />
 
@@ -43,14 +41,14 @@
     <section id="main">
       <img id="foto-de-perfil" src="Assents/foto.jpg" alt="foto-de-perfil" />
       <div class="msg-principal">
+        <h1 id="nome">Douglas Vinícius <br /></h1>
         <h1>
-          Douglas Vinícius <br />
           <strong class="destaque">Full Stack Developer</strong>
         </h1>
         <br />
         <p>
-          Estudante de Ciência da Computação interessado<br />
-          por <strong class="destaque">desenvolvimento de software.</strong>
+          Estudante de Ciência da Computação focado<br />
+          em <strong class="destaque">Desenvolvimento de Software.</strong>
         </p>
       </div>
 
@@ -60,6 +58,7 @@
     <section id="sobre">
       <div>
         <h2 class="topicos">Sobre</h2>
+        <h3 class="sub-titulo" t>Saiba um pouco sobre mim</h3>
         <p class="paragrafo">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veniam
           sed dolorum. Ipsa dignissimos voluptatibus, explicabo, numquam iste
@@ -121,10 +120,9 @@
       </div>
     </section>
 
-
     <!-- Footer -->
-     <footer id="rodape">
+    <footer id="rodape">
       <p class="paragrafro">&copy; 2026 - Douglas Vinícius</p>
-     </footer>
+    </footer>
   </body>
 </html>

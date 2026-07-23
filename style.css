@@ -10,12 +10,14 @@ body {
   background-image: url(Assents/fundo-ofc.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Estilo do Header */
 
 #cabecario{
-    width: 500px;
+  background: #000000de;
+  width: 550px;
     margin: 25px auto;
     border: 1px solid #00C27A;
     border-radius: 36px;
@@ -24,6 +26,8 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
+    padding: 12px 16px;
+    gap: 10px;
 }
 
 #tema{
@@ -40,9 +44,11 @@ body {
 nav ul{
     display: flex;
     gap: 15px;
+    padding-right: 0;
     list-style: none;
     margin: 0;
-    padding: 0px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 a{
@@ -60,13 +66,14 @@ a:hover{
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
-  display: flex;
   align-items: center;
+  gap: 24px;
+  padding: 0 20px;
 }
 
 #foto-de-perfil {
   border-radius: 50%;
-  width: 350px;
+  width: min(72vw, 320px);
   border: 1px solid #00C27A;
   box-shadow: #00C27A;
 }
@@ -84,6 +91,15 @@ a:hover{
   border-radius: 16px;
 }
 
+#nome {
+  font-family: "Cardo", serif;
+
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
 
 .msg-principal {
   margin: 40px;
@@ -98,6 +114,12 @@ a:hover{
 
 .destaque {
   color: #00C27A;
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 0;
+
 }
 
 
@@ -111,12 +133,20 @@ a:hover{
   font-variation-settings: "ELSH" 0;
   font-size: 35px;
   text-align: center;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.sub-titulo {
+  color: #00C27A;
+  font-family: "Inter";
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .paragrafo {
   color: white;
+  font-family: "Inter", sans-serif;
   padding-left: 35px;
   padding-right: 35px;
   margin: 10px 60px;
@@ -143,7 +173,7 @@ table {
     rgba(10, 10, 10, 0.95)
   );
   border: 1px solid white;
-  width: 850px;
+  width: min(92vw, 850px);
   border-radius: 24px;
   padding: 10px;
   font-size: 26px;
@@ -187,4 +217,72 @@ td:hover {
   padding: 15px 0;
   width: 100%;
   height: 50px;
+}
+
+/* Responsividade do site */
+
+@media (max-width: 890px) {
+  #main {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .msg-principal {
+    font-size: clamp(18px, 3.4vw, 30px);
+    margin: 0;
+  }
+
+  #sobre {
+    margin: 0 16px 32px;
+    font-size: 15px;
+  }
+
+  .paragrafo {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+
+  table {
+    width: 400px;
+    font-size: 15px;
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #cabecario {
+    width: 94vw;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  #tema {
+    padding-left: 0;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  a {
+    font-size: 13px;
+  }
+
+  #foto-de-perfil {
+    width: 220px;
+  }
+
+  .topicos {
+    font-size: 28px;
+  }
+
+  .sub-titulo {
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 11px;
+  }
 }
