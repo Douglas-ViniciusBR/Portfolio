@@ -10,7 +10,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Assents/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="Assents/favicon.png" type="image/png" sizes="1024x1024" />
+    <link rel="apple-touch-icon" href="Assents/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
@@ -20,19 +21,27 @@
   <body>
     <!-- Cabeçario -->
     <header id="cabecario">
-      <button id="tema">
-        <img src="Assents/Botão.png" alt="Logo DV" />
+      <button id="tema" type="button" aria-label="Ativar tema claro" title="Ativar tema claro">
+        <span class="tema-icone" aria-hidden="true">☀</span>
       </button>
 
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#tecnologias">Tecnologias</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contatos</a></li>
+          <li><a href="#" data-i18n="home">Home</a></li>
+          <li><a href="#sobre" data-i18n="about">Sobre</a></li>
+          <li><a href="#tecnologias" data-i18n="technologies">Tecnologias</a></li>
+          <li><a href="#" data-i18n="projects">Projetos</a></li>
+          <li><a href="#" data-i18n="contacts">Contatos</a></li>
         </ul>
       </nav>
+
+      <label class="seletor-idioma" for="idioma">
+        <span class="sr-only">Idioma</span>
+        <select id="idioma" aria-label="Selecionar idioma">
+          <option value="pt-BR">BR</option>
+          <option value="en">EUA</option>
+        </select>
+      </label>
     </header>
 
     <br /><br />
@@ -57,8 +66,8 @@
 
     <section id="sobre">
       <div>
-        <h2 class="topicos">Sobre</h2>
-        <h3 class="sub-titulo" t>Saiba um pouco sobre mim</h3>
+        <h2 class="topicos" data-i18n="about">Sobre</h2>
+        <h3 class="sub-titulo" data-i18n="aboutSubtitle">Saiba um pouco sobre mim</h3>
         <p class="paragrafo">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veniam
           sed dolorum. Ipsa dignissimos voluptatibus, explicabo, numquam iste
@@ -79,44 +88,20 @@
     <!-- Tecnologias utilizadas pelo Dev -->
     <section id="tecnologias">
       <div>
-        <h2 class="topicos">Tecnologias</h2>
-        <table>
-          <tr>
-            <th>Front-End</th>
-            <th>Back-End</th>
-            <th>Banco de Dados</th>
-            <th>Ferramentas</th>
-          </tr>
-
-          <tr>
-            <td><i class="devicon-html5-plain"></i> HTML</td>
-            <td><i class="devicon-java-plain"></i> Java</td>
-            <td><i class="devicon-mysql-plain"></i> MySQL</td>
-            <td><i class="devicon-vscode-plain"></i> VS Code</td>
-          </tr>
-
-          <tr>
-            <td><i class="devicon-css3-plain"></i> CSS</td>
-            <td><i class="devicon-python-plain"></i> Python</td>
-            <td></td>
-            <td><i class="devicon-intellij-plain"></i> IntelliJ IDEA</td>
-          </tr>
-          <tr>
-            <td>
-              <i class="devicon-javascript-plain"></i>
-              JavaScript
-            </td>
-            <td></td>
-            <td></td>
-            <td><i class="devicon-git-plain"></i> Git</td>
-          </tr>
-          <tr>
-            <td><i class="devicon-react-original"></i> React</td>
-            <td></td>
-            <td></td>
-            <td><i class="devicon-github-original"></i> GitHub</td>
-          </tr>
-        </table>
+        <h2 class="topicos" data-i18n="technologies">Tecnologias</h2>
+        <div class="tecnologias-cards">
+          <article class="tecnologia-card"><i class="devicon-html5-plain"></i><h3>HTML</h3><span data-i18n="frontend">Front-End</span></article>
+          <article class="tecnologia-card"><i class="devicon-css3-plain"></i><h3>CSS</h3><span data-i18n="frontend">Front-End</span></article>
+          <article class="tecnologia-card"><i class="devicon-javascript-plain"></i><h3>JavaScript</h3><span data-i18n="frontend">Front-End</span></article>
+          <article class="tecnologia-card"><i class="devicon-react-original"></i><h3>React</h3><span data-i18n="frontend">Front-End</span></article>
+          <article class="tecnologia-card"><i class="devicon-java-plain"></i><h3>Java</h3><span data-i18n="backend">Back-End</span></article>
+          <article class="tecnologia-card"><i class="devicon-python-plain"></i><h3>Python</h3><span data-i18n="backend">Back-End</span></article>
+          <article class="tecnologia-card"><i class="devicon-mysql-plain"></i><h3>MySQL</h3><span data-i18n="database">Banco de Dados</span></article>
+          <article class="tecnologia-card"><i class="devicon-vscode-plain"></i><h3>VS Code</h3><span data-i18n="tool">Ferramenta</span></article>
+          <article class="tecnologia-card"><i class="devicon-intellij-plain"></i><h3>IntelliJ IDEA</h3><span data-i18n="tool">Ferramenta</span></article>
+          <article class="tecnologia-card"><i class="devicon-git-plain"></i><h3>Git</h3><span data-i18n="tool">Ferramenta</span></article>
+          <article class="tecnologia-card"><i class="devicon-github-original"></i><h3>GitHub</h3><span data-i18n="tool">Ferramenta</span></article>
+        </div>
       </div>
     </section>
 
@@ -124,5 +109,6 @@
     <footer id="rodape">
       <p class="paragrafro">&copy; 2026 - Douglas Vinícius</p>
     </footer>
+    <script src="scripts.js"></script>
   </body>
 </html>
