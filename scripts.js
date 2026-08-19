@@ -1,6 +1,6 @@
 const botaoTema = document.querySelector("#tema");
       const iconeTema = botaoTema.querySelector(".tema-icone");
-      const seletorIdioma = document.querySelector("#idioma");
+      const botaoIdioma = document.querySelector("#idioma");
       const traducoes = {
         "pt-BR": {
           home: "Home",
@@ -33,7 +33,10 @@ const botaoTema = document.querySelector("#tema");
         document.querySelectorAll("[data-i18n]").forEach((elemento) => {
           elemento.textContent = traducoes[idioma][elemento.dataset.i18n];
         });
-        seletorIdioma.value = idioma;
+        const idiomaEmIngles = idioma === "en";
+        botaoIdioma.textContent = idiomaEmIngles ? "EUA" : "BR";
+        botaoIdioma.setAttribute("aria-label", idiomaEmIngles ? "Mudar para português" : "Change to English");
+        botaoIdioma.title = botaoIdioma.getAttribute("aria-label");
       }
 
       function atualizarTema(tema) {
@@ -53,7 +56,8 @@ const botaoTema = document.querySelector("#tema");
       });
 
       atualizarIdioma(localStorage.getItem("idioma") || "pt-BR");
-      seletorIdioma.addEventListener("change", (evento) => {
-        localStorage.setItem("idioma", evento.target.value);
-        atualizarIdioma(evento.target.value);
+      botaoIdioma.addEventListener("click", () => {
+        const novoIdioma = document.documentElement.lang === "pt-BR" ? "en" : "pt-BR";
+        localStorage.setItem("idioma", novoIdioma);
+        atualizarIdioma(novoIdioma);
       });

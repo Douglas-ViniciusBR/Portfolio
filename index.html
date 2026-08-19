@@ -35,13 +35,9 @@
         </ul>
       </nav>
 
-      <label class="seletor-idioma" for="idioma">
-        <span class="sr-only">Idioma</span>
-        <select id="idioma" aria-label="Selecionar idioma">
-          <option value="pt-BR">BR</option>
-          <option value="en">EUA</option>
-        </select>
-      </label>
+      <button id="idioma" type="button" aria-label="Mudar idioma" title="Mudar idioma">
+        BR
+      </button>
     </header>
 
     <br /><br />
@@ -49,18 +45,23 @@
     <!-- Main -->
     <section id="main">
       <img id="foto-de-perfil" src="Assents/foto.jpeg" alt="foto-de-perfil" />
-      <div class="msg-principal">
-        <h1 id="nome">Douglas Vinícius <br /></h1>
+      <div class="msg-principal"> 
+        <h1 id="nome">< Douglas Vinícius <strong class="destaque">/</strong>><br /></h1>
         <h1>
-          <strong class="destaque">Full Stack Developer</strong>
+          <strong class="destaque">Full Stack Developer <br>
+            Data Enginner</strong>
         </h1>
         <br />
         <p>
-          Estudante de Ciência da Computação focado<br />
+          Estudante de Ciência da Computação <br />
+          focado
           em <strong class="destaque">Desenvolvimento de Software.</strong>
         </p>
+        <div id="curriculo">
+          <a href="/Assents/Currículo.pdf" download="Currículo.pdf">Download CV</a>
+        </div>
       </div>
-
+      
       <!-- Sobre -->
     </section>
 
@@ -97,6 +98,7 @@
           <article class="tecnologia-card"><i class="devicon-java-plain"></i><h3>Java</h3><span data-i18n="backend">Back-End</span></article>
           <article class="tecnologia-card"><i class="devicon-python-plain"></i><h3>Python</h3><span data-i18n="backend">Back-End</span></article>
           <article class="tecnologia-card"><i class="devicon-mysql-plain"></i><h3>MySQL</h3><span data-i18n="database">Banco de Dados</span></article>
+          <article class="tecnologia-card"><i class="devicon-postgresql-plain"></i><h3>PostgreSQL</h3><span data-i18n="database">Banco de Dados</span></article>
           <article class="tecnologia-card"><i class="devicon-vscode-plain"></i><h3>VS Code</h3><span data-i18n="tool">Ferramenta</span></article>
           <article class="tecnologia-card"><i class="devicon-intellij-plain"></i><h3>IntelliJ IDEA</h3><span data-i18n="tool">Ferramenta</span></article>
           <article class="tecnologia-card"><i class="devicon-git-plain"></i><h3>Git</h3><span data-i18n="tool">Ferramenta</span></article>

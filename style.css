@@ -15,17 +15,19 @@ body {
 
 :root[data-tema="claro"] body {
   background-color: #eaf8f2;
-  background-image: linear-gradient(rgba(234, 248, 242, 0.94), rgba(234, 248, 242, 0.94)), url(Assents/fundo-ofc.png);
+  background-image:
+    linear-gradient(rgba(234, 248, 242, 0.94), rgba(234, 248, 242, 0.94)),
+    url(Assents/fundo-ofc.png);
 }
 
 /* Estilo do Header */
 
-#cabecario{
+#cabecario {
   background: #000000de;
   width: min(94vw, 760px);
   min-height: 70px;
   margin: 25px auto;
-  border: 1px solid #00C27A;
+  border: 1px solid #00c27a;
   border-radius: 36px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -37,45 +39,49 @@ body {
   gap: 16px;
 }
 
-
 #tema {
   width: 42px;
   height: 42px;
-  border: 1px solid #00C27A;
+  border: 1px solid #00c27a;
   border-radius: 50%;
   background: transparent;
-  color: #00C27A;
+  color: #00c27a;
   cursor: pointer;
   font-size: 23px;
   line-height: 1;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
   justify-self: start;
 }
 
 #tema:hover {
-  background: #00C27A;
+  background: #00c27a;
   color: #101010;
   transform: rotate(15deg);
+  transition: 0.5s;
 }
 
-nav ul{
-    display: flex;
-    gap: 15px;
-    padding-right: 0;
-    list-style: none;
-    margin: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+nav ul {
+  display: flex;
+  gap: 15px;
+  padding-right: 0;
+  list-style: none;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
 }
 
-a:hover{
-    color: #00C27A;
+a:hover {
+  color: #00c27a;
+  transition: 0.5s;
 }
 
 #main {
@@ -91,13 +97,53 @@ a:hover{
 #foto-de-perfil {
   border-radius: 50%;
   width: min(72vw, 320px);
-  border: 1px solid #00C27A;
-  box-shadow: #00C27A;
+  border: 1px solid #00c27a;
+  box-shadow: #00c27a;
+}
+
+#curriculo {
+  width: fit-content;
+  min-width: 150px;
+  height: 44px;
+  margin-top: 24px;
+  background-color: #00c27a;
+  border: 1px solid #00c27a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 194, 122, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#curriculo:hover {
+  background-color: #008f5a;
+  box-shadow: 0 8px 22px rgba(0, 194, 122, 0.32);
+  transform: translateY(-2px);
+}
+
+#curriculo a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  color: #101010;
+  font: 600 14px "Inter", sans-serif;
+}
+
+#curriculo a:hover,
+#curriculo a:focus-visible {
+  color: white;
+}
+
+#curriculo a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -4px;
 }
 
 #sobre {
   margin: 0px 100px;
-  padding:  30px 20px;
+  padding: 30px 20px;
   background: linear-gradient(
     135deg,
     rgba(10, 10, 10, 0.95),
@@ -116,34 +162,33 @@ a:hover{
   border-color: #008f5a;
 }
 
-.seletor-idioma {
-  justify-self: end;
-}
-
 #idioma {
-  min-height: 38px;
-  padding: 0 9px;
-  border: 1px solid #00C27A;
+  min-height: 42px;
+  min-width: 52px;
+  padding: 0 10px;
+  border: 1px solid #00c27a;
   border-radius: 10px;
   background: transparent;
   color: white;
   cursor: pointer;
-  font: 600 12px "Inter", sans-serif;
+  font:
+    600 12px "Inter",
+    sans-serif;
+  justify-self: end;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
-#idioma option {
-  background: #101010;
-  color: white;
+#idioma:hover {
+  background: #00c27a;
+  color: #101010;
+  transition: 0.5s;
 }
 
 :root[data-tema="claro"] #idioma {
   color: #17231e;
   border-color: #008f5a;
-}
-
-:root[data-tema="claro"] #idioma option {
-  background: white;
-  color: #17231e;
 }
 
 .sr-only {
@@ -173,13 +218,11 @@ a:hover{
 
 #nome {
   font-family: "Cardo", serif;
-
 }
 
 p {
   font-family: "Inter", sans-serif;
 }
-
 
 .msg-principal {
   margin: 40px;
@@ -193,19 +236,16 @@ p {
 }
 
 .destaque {
-  color: #00C27A;
+  color: #00c27a;
   font-family: "Geist Pixel", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "ELSH" 0;
-
 }
 
-
-
 .topicos {
-  color: #00C27A;
+  color: #00c27a;
   font-family: "Geist Pixel", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -217,7 +257,7 @@ p {
 }
 
 .sub-titulo {
-  color: #00C27A;
+  color: #00c27a;
   font-family: "Inter";
   font-size: 20px;
   text-align: center;
@@ -237,7 +277,7 @@ p {
   justify-content: center;
   width: auto;
   padding: 50px 20px;
-  color: #00C27A;
+  color: #00c27a;
   font-family: "Geist Pixel", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -269,11 +309,14 @@ p {
   justify-content: center;
   text-align: center;
   gap: 8px;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .tecnologia-card:hover {
-  border-color: #00C27A;
+  border-color: #00c27a;
   box-shadow: 0 8px 22px rgba(0, 194, 122, 0.22);
   transform: translateY(-6px);
 }
@@ -289,12 +332,10 @@ p {
 }
 
 .tecnologia-card span {
-  color: #7FF3D1;
+  color: #7ff3d1;
   font-family: "Inter", sans-serif;
   font-size: 13px;
 }
-
-
 
 #rodape {
   color: #ddd;
@@ -331,6 +372,10 @@ p {
     margin: 0;
   }
 
+  #curriculo {
+    margin-inline: auto;
+  }
+
   #sobre {
     margin: 0 16px 32px;
     font-size: 15px;
@@ -348,27 +393,40 @@ p {
 
 @media (max-width: 600px) {
   #cabecario {
-    width: 94vw;
-    border-radius: 20px;
-    grid-template-columns: 1fr auto;
-    gap: 10px;
+    width: calc(100% - 16px);
+    min-height: 62px;
+    margin: 12px auto;
+    padding: 8px 10px;
+    border-radius: 28px;
+    grid-template-columns: 36px minmax(0, 1fr) 42px;
+    gap: 6px;
   }
 
   #cabecario nav {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    min-width: 0;
   }
 
   #tema {
-    padding-left: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
   }
 
   nav ul {
-    gap: 10px;
+    flex-wrap: nowrap;
+    gap: clamp(3px, 1.8vw, 8px);
   }
 
   a {
-    font-size: 13px;
+    font-size: clamp(9px, 2.9vw, 13px);
+    white-space: nowrap;
+  }
+
+  #idioma {
+    min-height: 36px;
+    min-width: 42px;
+    font-size: 10px;
+    border-radius: 50%;
   }
 
   #foto-de-perfil {
@@ -394,5 +452,21 @@ p {
 
   .tecnologia-card h3 {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 340px) {
+  #cabecario {
+    width: calc(100% - 8px);
+    padding-inline: 6px;
+    gap: 4px;
+  }
+
+  nav ul {
+    gap: 3px;
+  }
+
+  a {
+    font-size: 9px;
   }
 }
