@@ -27,11 +27,11 @@
 
       <nav>
         <ul>
-          <li><a href="#" data-i18n="home">Home</a></li>
+          <li><a href="#main" data-i18n="home">Home</a></li>
           <li><a href="#sobre" data-i18n="about">Sobre</a></li>
           <li><a href="#tecnologias" data-i18n="technologies">Tecnologias</a></li>
-          <li><a href="#" data-i18n="projects">Projetos</a></li>
-          <li><a href="#" data-i18n="contacts">Contatos</a></li>
+          <li><a href="#projetos" data-i18n="projects">Projetos</a></li>
+          <li><a href="#contatos" data-i18n="contacts">Contatos</a></li>
         </ul>
       </nav>
 
@@ -48,10 +48,9 @@
       <div class="msg-principal"> 
         <h1 id="nome">< Douglas Vinícius <strong class="destaque">/</strong>><br /></h1>
         <h1>
-          <strong class="destaque">Full Stack Developer <br>
+          <strong class="destaque" id="cargo">Full Stack Developer <br>
             Data Enginner</strong>
-        </h1>
-        <br />
+        </h1> 
         <p>
           Estudante de Ciência da Computação <br />
           focado
@@ -108,10 +107,68 @@
       </div>
     </section>
 
+    <section id="projetos">
+      <div class="secao-conteudo">
+        <h2 class="topicos" data-i18n="projects">Projetos</h2>
+        <p class="secao-introducao" data-i18n="projectsIntro">Alguns trabalhos que representam minha evolução como desenvolvedor.</p>
+
+        <div class="projetos-grid">
+          <article class="projeto-card">
+            <div class="projeto-icone" aria-hidden="true">&lt;/&gt;</div>
+            <div class="projeto-conteudo">
+              <span class="projeto-status" data-i18n="projectStatus">Em desenvolvimento</span>
+              <h3>Portfólio pessoal</h3>
+              <p data-i18n="portfolioDescription">Site responsivo para apresentar minha trajetória, tecnologias e projetos.</p>
+              <ul class="projeto-tags" aria-label="Tecnologias utilizadas">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <a class="botao-link" href="https://github.com/Douglas-ViniciusBR/Portfolio" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="viewCode">Ver código</span><span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatos">
+      <div class="secao-conteudo">
+        <h2 class="topicos" data-i18n="contacts">Contatos</h2>
+        <p class="secao-introducao" data-i18n="contactIntro">Vamos criar algo incrível juntos?</p>
+        <div class="contato-painel">
+          <div>
+            <h3 data-i18n="contactTitle">Aberto a novas oportunidades</h3>
+            <p data-i18n="contactDescription">Conheça meus trabalhos e acompanhe minha evolução profissional.</p>
+          </div>
+          <div class="contato-acoes">
+            <a class="contato-link github" href="https://github.com/Douglas-ViniciusBR" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+              <span>GitHub</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="contato-link linkedin" href="https://www.linkedin.com/in/douglas-vin%C3%ADcius-635475327/" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+              <span>Linkedin</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="contato-link instagram" href="https://www.instagram.com/odouglasxjp/" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+              <span>Instagram</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer id="rodape">
       <p class="paragrafro">&copy; 2026 - Douglas Vinícius</p>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

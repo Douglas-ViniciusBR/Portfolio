@@ -12,7 +12,15 @@ const botaoTema = document.querySelector("#tema");
           frontend: "Front-End",
           backend: "Back-End",
           database: "Banco de Dados",
-          tool: "Ferramenta"
+          tool: "Ferramenta",
+          projectsIntro: "Alguns trabalhos que representam minha evolução como desenvolvedor.",
+          projectStatus: "Em desenvolvimento",
+          portfolioDescription: "Site responsivo para apresentar minha trajetória, tecnologias e projetos.",
+          viewCode: "Ver código",
+          contactIntro: "Vamos criar algo incrível juntos?",
+          contactTitle: "Aberto a novas oportunidades",
+          contactDescription: "Conheça meus trabalhos e acompanhe minha evolução profissional.",
+          downloadCv: "Baixar currículo"
         },
         en: {
           home: "Home",
@@ -24,7 +32,15 @@ const botaoTema = document.querySelector("#tema");
           frontend: "Front-End",
           backend: "Back-End",
           database: "Database",
-          tool: "Tool"
+          tool: "Tool",
+          projectsIntro: "A selection of work that reflects my growth as a developer.",
+          projectStatus: "In development",
+          portfolioDescription: "A responsive website that presents my journey, technologies, and projects.",
+          viewCode: "View code",
+          contactIntro: "Let's build something great together.",
+          contactTitle: "Open to new opportunities",
+          contactDescription: "Explore my work and follow my professional growth.",
+          downloadCv: "Download résumé"
         }
       };
 

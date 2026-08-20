@@ -101,6 +101,10 @@ a:hover {
   box-shadow: #00c27a;
 }
 
+#cargo {
+  font-size: 50px;
+}
+
 #curriculo {
   width: fit-content;
   min-width: 150px;
@@ -111,7 +115,10 @@ a:hover {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 194, 122, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 #curriculo:hover {
@@ -128,7 +135,9 @@ a:hover {
   justify-content: center;
   padding: 0 18px;
   color: #101010;
-  font: 600 14px "Inter", sans-serif;
+  font:
+    600 14px "Inter",
+    sans-serif;
 }
 
 #curriculo a:hover,
@@ -157,6 +166,8 @@ a:hover {
 :root[data-tema="claro"] #cabecario,
 :root[data-tema="claro"] #sobre,
 :root[data-tema="claro"] .tecnologia-card,
+:root[data-tema="claro"] .projeto-card,
+:root[data-tema="claro"] .contato-painel,
 :root[data-tema="claro"] #rodape {
   background: rgba(255, 255, 255, 0.92);
   border-color: #008f5a;
@@ -251,9 +262,8 @@ p {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "ELSH" 0;
-  font-size: 35px;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .sub-titulo {
@@ -337,11 +347,187 @@ p {
   font-size: 13px;
 }
 
+#projetos {
+  width: 100%;
+  padding: 72px 20px;
+}
+
+.secao-conteudo {
+  width: min(92vw, 850px);
+  margin: 0 auto;
+}
+
+.secao-introducao {
+  color: #c7d4cf;
+  text-align: center;
+  margin: 0 auto 30px;
+  font-size: 16px;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.projeto-card,
+.contato-painel {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.95),
+    rgba(20, 20, 20, 0.9)
+  );
+}
+
+.projeto-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.projeto-card:hover {
+  border-color: #00c27a;
+  box-shadow: 0 10px 26px rgba(0, 194, 122, 0.18);
+  transform: translateY(-4px);
+}
+
+.projeto-icone {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  color: #00c27a;
+  background: rgba(0, 194, 122, 0.08);
+  font:
+    40px "Geist Pixel",
+    sans-serif;
+}
+
+.projeto-conteudo {
+  padding: 26px;
+}
+
+.projeto-status {
+  display: inline-block;
+  color: #7ff3d1;
+  font:
+    600 12px "Inter",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projeto-conteudo h3,
+.contato-painel h3 {
+  color: white;
+  margin: 8px 0;
+  font:
+    500 24px "Geist Pixel",
+    sans-serif;
+}
+
+.projeto-conteudo p,
+.contato-painel p {
+  color: #c7d4cf;
+  line-height: 1.6;
+}
+
+.projeto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.projeto-tags li {
+  border: 1px solid rgba(0, 194, 122, 0.5);
+  border-radius: 999px;
+  color: #7ff3d1;
+  padding: 5px 10px;
+  font:
+    600 12px "Inter",
+    sans-serif;
+}
+
+.botao-link,
+.contato-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #00c27a;
+  border-radius: 9px;
+  color: #00c27a;
+  font:
+    600 14px "Inter",
+    sans-serif;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.botao-link:hover,
+.contato-link:hover {
+  background: #00c27a;
+  color: #101010;
+  transform: translateY(-2px);
+}
+
+#contatos {
+  padding: 0 20px 72px;
+}
+
+.contato-painel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 28px;
+}
+
+.contato-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.contato-link ion-icon {
+  flex: 0 0 auto;
+  font-size: 21px;
+}
+
+.contato-link > span:first-of-type {
+  min-width: 68px;
+  text-align: left;
+}
+
+.contato-link > span:last-child {
+  margin-left: auto;
+}
+
+:root[data-tema="claro"] .secao-introducao,
+:root[data-tema="claro"] .projeto-conteudo p,
+:root[data-tema="claro"] .contato-painel p {
+  color: #45534d;
+}
+
+:root[data-tema="claro"] .projeto-conteudo h3,
+:root[data-tema="claro"] .contato-painel h3 {
+  color: #17231e;
+}
+
 #rodape {
   color: #ddd;
   border-top: 1px solid #ddd;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
   font-variation-settings: "ELSH" 0;
   background: linear-gradient(
     135deg,
@@ -388,6 +574,15 @@ p {
 
   .tecnologias-cards {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+
+  .contato-painel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contato-acoes {
+    justify-content: flex-start;
   }
 }
 
@@ -452,6 +647,32 @@ p {
 
   .tecnologia-card h3 {
     font-size: 17px;
+  }
+
+  #projetos {
+    padding: 52px 16px;
+  }
+
+  #contatos {
+    padding: 0 16px 52px;
+  }
+
+  .projeto-card {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-icone {
+    min-height: 95px;
+  }
+
+  .projeto-conteudo,
+  .contato-painel {
+    padding: 22px;
+  }
+
+  .contato-acoes,
+  .contato-link {
+    width: 100%;
   }
 }
 
