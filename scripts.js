@@ -20,7 +20,8 @@ const botaoTema = document.querySelector("#tema");
           contactIntro: "Vamos criar algo incrível juntos?",
           contactTitle: "Aberto a novas oportunidades",
           contactDescription: "Conheça meus trabalhos e acompanhe minha evolução profissional.",
-          downloadCv: "Baixar currículo"
+          downloadCv: "Baixar currículo",
+          portfolioName: "Portfólio pessoal"
         },
         en: {
           home: "Home",
@@ -40,7 +41,8 @@ const botaoTema = document.querySelector("#tema");
           contactIntro: "Let's build something great together.",
           contactTitle: "Open to new opportunities",
           contactDescription: "Explore my work and follow my professional growth.",
-          downloadCv: "Download résumé"
+          downloadCv: "Download résumé",
+          portfolioName: "Personal portfolio"
         }
       };
 
@@ -50,7 +52,7 @@ const botaoTema = document.querySelector("#tema");
           elemento.textContent = traducoes[idioma][elemento.dataset.i18n];
         });
         const idiomaEmIngles = idioma === "en";
-        botaoIdioma.textContent = idiomaEmIngles ? "EUA" : "BR";
+        botaoIdioma.textContent = idiomaEmIngles ? "EN" : "BR";
         botaoIdioma.setAttribute("aria-label", idiomaEmIngles ? "Mudar para português" : "Change to English");
         botaoIdioma.title = botaoIdioma.getAttribute("aria-label");
       }
