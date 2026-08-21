@@ -14,10 +14,8 @@ body {
 }
 
 :root[data-tema="claro"] body {
-  background-color: #eaf8f2;
   background-image:
-    linear-gradient(rgba(234, 248, 242, 0.94), rgba(234, 248, 242, 0.94)),
-    url(Assents/fundo-ofc.png);
+    url(Assents/fundo-ofc-tema-claro.png);
 }
 
 /* Estilo do Header */
