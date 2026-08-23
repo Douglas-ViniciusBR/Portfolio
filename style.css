@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Animação da foto de perfil */
 @keyframes fotoPerfil {
     0% {
         transform: translateY(0);
@@ -19,12 +20,64 @@
     }
 }
 
+@keyframes ScrollPage {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Exebindo as Sections */
+@keyframes ExeibirSections {
+    0% {opacity: 0;
+        transform: (1600px)
+        rotateY(35deg) 
+        rotateX(25deg) 
+        translateY(150px)
+        scale(.55);
+        filter: blur(10px);
+    }
+
+    60% {
+      transform: perspective(1600px)
+      rotateY(-5deg) 
+      scale(1.05);
+    }
+
+    100% {
+      opacity: 1;
+      transform:
+      perspective(1600px)
+      rotateY(0)
+      rotateX(0)
+      translateY(0)
+      scale(1);
+      filter: blur(0);
+    }
+  }
+
+
 body {
   font-family: "Roboto", sans-serif;
   background-image: url(Assents/fundo-ofc.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #00c27a;
+  transform-origin: 0 50%;
+  animation: ScrollPage linear;
+  animation-timeline: scroll();
 }
 
 :root[data-tema="claro"] body {
@@ -192,6 +245,9 @@ a:hover::after {
   );
   border: 1px solid white;
   border-radius: 16px;
+  animation: ExeibirSections linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 :root[data-tema="claro"] #cabecario,
@@ -323,6 +379,9 @@ p {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "ELSH" 0;
+  animation: ExeibirSections linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .tecnologias-cards {
@@ -380,6 +439,9 @@ p {
 #projetos {
   width: 100%;
   padding: 72px 20px;
+  animation: ExeibirSections linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .secao-conteudo {
@@ -513,6 +575,10 @@ p {
 
 #contatos {
   padding: 0 20px 72px;
+  animation: ExeibirSections linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  margin-bottom: 35px;
 }
 
 .contato-painel {
@@ -556,8 +622,12 @@ p {
 }
 
 #rodape {
-  color: #ddd;
   border-top: 1px solid #ddd;
+  color: #00c27a;
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   font-variation-settings: "ELSH" 0;
   background: linear-gradient(
     135deg,
