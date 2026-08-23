@@ -178,6 +178,7 @@ a:hover::after {
 #foto-de-perfil {
   border-radius: 50%;
   width: min(72vw, 320px);
+  width: 360px;
   border: 1px solid #00c27a;
   box-shadow: #00c27a;
   animation-name: fotoPerfil;
@@ -726,6 +727,10 @@ p {
 
   #foto-de-perfil {
     width: 220px;
+  }
+
+  #cargo {
+    font-size: 35px;
   }
 
   .topicos {
