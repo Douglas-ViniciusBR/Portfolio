@@ -61,7 +61,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url(Assents/fundo-ofc.png);
+  background-image: url('/Assents/fundo-ofc.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -82,7 +82,7 @@ body {
 
 :root[data-tema="claro"] body {
   background-image:
-    url(Assents/fundo-ofc-tema-claro.png);
+    url('/Assents/fundo-ofc-tema-claro.png');
 }
 
 /* Estilo do Header */
@@ -110,7 +110,7 @@ body {
   border: 1px solid #00c27a;
   border-radius: 50%;
   background: transparent;
-  color: rgb(248, 248, 25);
+  color: #f8f819;
   cursor: pointer;
   font-size: 23px;
   line-height: 1;
@@ -123,7 +123,7 @@ body {
 
 #tema:hover {
   background: #00c27a;
-  color: rgb(248, 248, 25);
+  color: #f8f819;
   transform: rotate(15deg);
   transition: 0.5s;
 }
@@ -188,6 +188,7 @@ a:hover::after {
 
 #cargo {
   font-size: 50px;
+  line-height: 1.05;
 }
 
 #curriculo {
@@ -304,9 +305,8 @@ a:hover::after {
 :root[data-tema="claro"] a,
 :root[data-tema="claro"] .msg-principal,
 :root[data-tema="claro"] .paragrafo,
-:root[data-tema="claro"] .tecnologia-card h3,
-:root[data-tema="claro"] #rodape {
-  color: #17231e;
+:root[data-tema="claro"] .tecnologia-card h3 {
+  color: #17231e; 
 }
 
 :root[data-tema="claro"] a:hover,
@@ -620,6 +620,10 @@ p {
 :root[data-tema="claro"] .projeto-conteudo h3,
 :root[data-tema="claro"] .contato-painel h3 {
   color: #17231e;
+}
+
+:root[data-tema="claro"].contato-link:hover {
+  color: black;
 }
 
 #rodape {
