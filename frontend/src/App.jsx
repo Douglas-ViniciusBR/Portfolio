@@ -76,7 +76,7 @@ function App() {
       And: "and",
       DataEnginner: "Data Engineering.",
       FullStack: "Full Stack Developer",
-      Enginner: "Data Enginner"
+      Enginner: "Data Engineer"
     },
   };
   const t = traducoes[idioma];
